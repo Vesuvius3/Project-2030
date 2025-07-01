@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		180BD21B2E145E010040F8D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 180BD2012E145DFE0040F8D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 180BD2082E145DFE0040F8D5;
+			remoteInfo = "PRJ-2030";
+		};
+		180BD2252E145E010040F8D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 180BD2012E145DFE0040F8D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 180BD2082E145DFE0040F8D5;
+			remoteInfo = "PRJ-2030";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		180BD2092E145DFE0040F8D5 /* PRJ-2030.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PRJ-2030.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		180BD21A2E145E010040F8D5 /* PRJ-2030Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PRJ-2030Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		180BD2242E145E010040F8D5 /* PRJ-2030UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PRJ-2030UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		180BD22C2E145E010040F8D5 /* Exceptions for "PRJ-2030" folder in "PRJ-2030" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 180BD2082E145DFE0040F8D5 /* PRJ-2030 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		180BD20B2E145DFE0040F8D5 /* PRJ-2030 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				180BD22C2E145E010040F8D5 /* Exceptions for "PRJ-2030" folder in "PRJ-2030" target */,
+			);
+			path = "PRJ-2030";
+			sourceTree = "<group>";
+		};
+		180BD21D2E145E010040F8D5 /* PRJ-2030Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PRJ-2030Tests";
+			sourceTree = "<group>";
+		};
+		180BD2272E145E010040F8D5 /* PRJ-2030UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PRJ-2030UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		180BD2062E145DFE0040F8D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BD2172E145E010040F8D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BD2212E145E010040F8D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180BD2002E145DFE0040F8D5 = {
+			isa = PBXGroup;
+			children = (
+				180BD20B2E145DFE0040F8D5 /* PRJ-2030 */,
+				180BD21D2E145E010040F8D5 /* PRJ-2030Tests */,
+				180BD2272E145E010040F8D5 /* PRJ-2030UITests */,
+				180BD20A2E145DFE0040F8D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		180BD20A2E145DFE0040F8D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				180BD2092E145DFE0040F8D5 /* PRJ-2030.app */,
+				180BD21A2E145E010040F8D5 /* PRJ-2030Tests.xctest */,
+				180BD2242E145E010040F8D5 /* PRJ-2030UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		180BD2082E145DFE0040F8D5 /* PRJ-2030 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180BD22D2E145E010040F8D5 /* Build configuration list for PBXNativeTarget "PRJ-2030" */;
+			buildPhases = (
+				180BD2052E145DFE0040F8D5 /* Sources */,
+				180BD2062E145DFE0040F8D5 /* Frameworks */,
+				180BD2072E145DFE0040F8D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				180BD20B2E145DFE0040F8D5 /* PRJ-2030 */,
+			);
+			name = "PRJ-2030";
+			packageProductDependencies = (
+			);
+			productName = "PRJ-2030";
+			productReference = 180BD2092E145DFE0040F8D5 /* PRJ-2030.app */;
+			productType = "com.apple.product-type.application";
+		};
+		180BD2192E145E010040F8D5 /* PRJ-2030Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180BD2322E145E010040F8D5 /* Build configuration list for PBXNativeTarget "PRJ-2030Tests" */;
+			buildPhases = (
+				180BD2162E145E010040F8D5 /* Sources */,
+				180BD2172E145E010040F8D5 /* Frameworks */,
+				180BD2182E145E010040F8D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				180BD21C2E145E010040F8D5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				180BD21D2E145E010040F8D5 /* PRJ-2030Tests */,
+			);
+			name = "PRJ-2030Tests";
+			packageProductDependencies = (
+			);
+			productName = "PRJ-2030Tests";
+			productReference = 180BD21A2E145E010040F8D5 /* PRJ-2030Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		180BD2232E145E010040F8D5 /* PRJ-2030UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180BD2352E145E010040F8D5 /* Build configuration list for PBXNativeTarget "PRJ-2030UITests" */;
+			buildPhases = (
+				180BD2202E145E010040F8D5 /* Sources */,
+				180BD2212E145E010040F8D5 /* Frameworks */,
+				180BD2222E145E010040F8D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				180BD2262E145E010040F8D5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				180BD2272E145E010040F8D5 /* PRJ-2030UITests */,
+			);
+			name = "PRJ-2030UITests";
+			packageProductDependencies = (
+			);
+			productName = "PRJ-2030UITests";
+			productReference = 180BD2242E145E010040F8D5 /* PRJ-2030UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		180BD2012E145DFE0040F8D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					180BD2082E145DFE0040F8D5 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					180BD2192E145E010040F8D5 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 180BD2082E145DFE0040F8D5;
+					};
+					180BD2232E145E010040F8D5 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 180BD2082E145DFE0040F8D5;
+					};
+				};
+			};
+			buildConfigurationList = 180BD2042E145DFE0040F8D5 /* Build configuration list for PBXProject "PRJ-2030" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 180BD2002E145DFE0040F8D5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 180BD20A2E145DFE0040F8D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				180BD2082E145DFE0040F8D5 /* PRJ-2030 */,
+				180BD2192E145E010040F8D5 /* PRJ-2030Tests */,
+				180BD2232E145E010040F8D5 /* PRJ-2030UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		180BD2072E145DFE0040F8D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BD2182E145E010040F8D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BD2222E145E010040F8D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		180BD2052E145DFE0040F8D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BD2162E145E010040F8D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		180BD2202E145E010040F8D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		180BD21C2E145E010040F8D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 180BD2082E145DFE0040F8D5 /* PRJ-2030 */;
+			targetProxy = 180BD21B2E145E010040F8D5 /* PBXContainerItemProxy */;
+		};
+		180BD2262E145E010040F8D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 180BD2082E145DFE0040F8D5 /* PRJ-2030 */;
+			targetProxy = 180BD2252E145E010040F8D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		180BD22E2E145E010040F8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PRJ-2030/PRJ_2030.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PRJ-2030/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "B-D.PRJ-2030";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		180BD22F2E145E010040F8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PRJ-2030/PRJ_2030.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PRJ-2030/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "B-D.PRJ-2030";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		180BD2302E145E010040F8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		180BD2312E145E010040F8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		180BD2332E145E010040F8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "B-D.PRJ-2030Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PRJ-2030.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PRJ-2030";
+			};
+			name = Debug;
+		};
+		180BD2342E145E010040F8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "B-D.PRJ-2030Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PRJ-2030.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PRJ-2030";
+			};
+			name = Release;
+		};
+		180BD2362E145E010040F8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "B-D.PRJ-2030UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "PRJ-2030";
+			};
+			name = Debug;
+		};
+		180BD2372E145E010040F8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "B-D.PRJ-2030UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "PRJ-2030";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		180BD2042E145DFE0040F8D5 /* Build configuration list for PBXProject "PRJ-2030" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180BD2302E145E010040F8D5 /* Debug */,
+				180BD2312E145E010040F8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		180BD22D2E145E010040F8D5 /* Build configuration list for PBXNativeTarget "PRJ-2030" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180BD22E2E145E010040F8D5 /* Debug */,
+				180BD22F2E145E010040F8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		180BD2322E145E010040F8D5 /* Build configuration list for PBXNativeTarget "PRJ-2030Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180BD2332E145E010040F8D5 /* Debug */,
+				180BD2342E145E010040F8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		180BD2352E145E010040F8D5 /* Build configuration list for PBXNativeTarget "PRJ-2030UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180BD2362E145E010040F8D5 /* Debug */,
+				180BD2372E145E010040F8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 180BD2012E145DFE0040F8D5 /* Project object */;
+}
