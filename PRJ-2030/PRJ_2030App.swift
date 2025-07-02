@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct PRJ_2030App: App {
     var body: some Scene {
-        DocumentGroup(newDocument: PRJ_2030Document()) { file in
-            ContentView(document: file.$document)
+        WindowGroup {
+            InitialSetupView()
         }
     }
 }
