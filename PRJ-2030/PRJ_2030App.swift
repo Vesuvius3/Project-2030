@@ -14,5 +14,6 @@ struct PRJ_2030App: App {
             InitialSetupView()
                 .environment(\.font, .americanTypewriter(size: 17))
         }
+        .accentColor(.gray)
     }
 }
