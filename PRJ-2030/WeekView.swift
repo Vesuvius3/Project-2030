@@ -38,35 +38,37 @@ struct WeekView: View {
             .padding()
             
             // Week view content
-            HStack(spacing: 0) {
-                // Time column
-                VStack(spacing: 0) {
-                    // Header spacer
-                    Rectangle()
-                        .fill(Color.clear)
-                        .frame(height: 40)
-                    
-                    // Time slots
-                    ForEach(timeSlots, id: \.self) { hour in
-                        Text(timeString(for: hour))
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                            .frame(width: 50, height: hourHeight, alignment: .topLeading)
-                            .padding(.top, 4)
+            ScrollView([.horizontal, .vertical]) {
+                HStack(spacing: 0) {
+                    // Time column
+                    VStack(spacing: 0) {
+                        // Header spacer
+                        Rectangle()
+                            .fill(Color.clear)
+                            .frame(height: 40)
+                        
+                        // Time slots
+                        ForEach(timeSlots, id: \.self) { hour in
+                            Text(timeString(for: hour))
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .frame(width: 50, height: hourHeight, alignment: .topLeading)
+                                .padding(.top, 4)
+                        }
                     }
-                }
-                .background(Color(NSColor.controlBackgroundColor))
-                
-                // Days columns
-                ForEach(weekDays, id: \.self) { date in
-                    DayColumn(
-                        date: date,
-                        isSelected: calendar.isDate(date, inSameDayAs: document.selectedDate),
-                        events: eventsForDate(date),
-                        hourHeight: hourHeight,
-                        document: $document
-                    ) {
-                        document.selectedDate = date
+                    .background(Color(NSColor.controlBackgroundColor))
+                    
+                    // Days columns
+                    ForEach(weekDays, id: \.self) { date in
+                        DayColumn(
+                            date: date,
+                            isSelected: calendar.isDate(date, inSameDayAs: document.selectedDate),
+                            events: eventsForDate(date),
+                            hourHeight: hourHeight,
+                            document: $document
+                        ) {
+                            document.selectedDate = date
+                        }
                     }
                 }
             }
@@ -158,27 +160,34 @@ struct DayColumn: View {
             .buttonStyle(PlainButtonStyle())
             
             // Time grid
-            ZStack {
-                // Grid lines
-                VStack(spacing: 0) {
-                    ForEach(0..<24, id: \.self) { _ in
-                        Rectangle()
-                            .fill(Color.gray.opacity(0.2))
-                            .frame(height: 1)
-                            .frame(maxWidth: .infinity)
-                        
-                        Rectangle()
-                            .fill(Color.clear)
-                            .frame(height: hourHeight - 1)
+            GeometryReader { geometry in
+                ZStack(alignment: .topLeading) {
+                    // Grid lines
+                    VStack(spacing: 0) {
+                        ForEach(0..<24, id: \.self) { _ in
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.2))
+                                .frame(height: 1)
+                            
+                            Rectangle()
+                                .fill(Color.clear)
+                                .frame(height: hourHeight - 1)
+                        }
                     }
-                }
-                
-                // Events
-                ForEach(events, id: \.id) { event in
-                    EventBlock(event: event, hourHeight: hourHeight, document: $document)
+                    
+                    // Events
+                    ForEach(events, id: \.id) { event in
+                        EventBlock(
+                            event: event, 
+                            hourHeight: hourHeight, 
+                            document: $document,
+                            availableWidth: geometry.size.width
+                        )
+                    }
                 }
             }
         }
+        .frame(width: 120)
         .background(Color(NSColor.controlBackgroundColor))
         .overlay(
             Rectangle()
@@ -197,6 +206,7 @@ struct EventBlock: View {
     let event: CalendarEvent
     let hourHeight: CGFloat
     @Binding var document: PRJ_2030Document
+    let availableWidth: CGFloat
     @State private var showingEventDetail = false
     
     private let calendar = Calendar.current
@@ -224,16 +234,12 @@ struct EventBlock: View {
                 }
             }
             .padding(4)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(width: availableWidth * 0.9, height: height, alignment: .leading)
             .background(event.color.color)
             .cornerRadius(4)
+            .offset(x: availableWidth * 0.05, y: yPosition)
         }
         .buttonStyle(PlainButtonStyle())
-        .position(
-            x: 50,
-            y: yPosition
-        )
-        .frame(width: 100, height: height)
         .sheet(isPresented: $showingEventDetail) {
             EventDetailView(event: event, document: $document)
         }
@@ -241,12 +247,12 @@ struct EventBlock: View {
     
     private var yPosition: CGFloat {
         if event.isAllDay {
-            return 20
+            return 10
         }
         
         let hour = calendar.component(.hour, from: event.startDate)
         let minute = calendar.component(.minute, from: event.startDate)
-        return CGFloat(hour) * hourHeight + CGFloat(minute) / 60.0 * hourHeight + hourHeight / 2
+        return CGFloat(hour) * hourHeight + CGFloat(minute) / 60.0 * hourHeight
     }
     
     private var height: CGFloat {

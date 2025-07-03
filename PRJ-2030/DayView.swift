@@ -38,43 +38,50 @@ struct DayView: View {
             .padding()
             
             // Day view content
-            HStack(spacing: 0) {
-                // Time column
-                VStack(spacing: 0) {
-                    // Time slots
-                    ForEach(timeSlots, id: \.self) { hour in
-                        Text(timeString(for: hour))
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                            .frame(width: 60, height: hourHeight, alignment: .topLeading)
-                            .padding(.top, 4)
-                    }
-                }
-                .background(Color(NSColor.controlBackgroundColor))
-                
-                // Events column
-                ZStack {
-                    // Grid lines
+            ScrollView {
+                HStack(spacing: 0) {
+                    // Time column
                     VStack(spacing: 0) {
-                        ForEach(0..<24, id: \.self) { _ in
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.2))
-                                .frame(height: 1)
-                                .frame(maxWidth: .infinity)
-                            
-                            Rectangle()
-                                .fill(Color.clear)
-                                .frame(height: hourHeight - 1)
+                        ForEach(timeSlots, id: \.self) { hour in
+                            Text(timeString(for: hour))
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .frame(width: 60, height: hourHeight, alignment: .topLeading)
+                                .padding(.top, 4)
                         }
                     }
+                    .background(Color(NSColor.controlBackgroundColor))
                     
-                    // Events
-                    ForEach(eventsForCurrentDate, id: \.id) { event in
-                        DayEventBlock(event: event, hourHeight: hourHeight, document: $document)
+                    // Events column
+                    GeometryReader { geometry in
+                        ZStack(alignment: .topLeading) {
+                            // Grid lines
+                            VStack(spacing: 0) {
+                                ForEach(0..<24, id: \.self) { _ in
+                                    Rectangle()
+                                        .fill(Color.gray.opacity(0.2))
+                                        .frame(height: 1)
+                                    
+                                    Rectangle()
+                                        .fill(Color.clear)
+                                        .frame(height: hourHeight - 1)
+                                }
+                            }
+                            
+                            // Events
+                            ForEach(eventsForCurrentDate, id: \.id) { event in
+                                DayEventBlock(
+                                    event: event, 
+                                    hourHeight: hourHeight, 
+                                    document: $document,
+                                    availableWidth: geometry.size.width
+                                )
+                            }
+                        }
                     }
+                    .frame(maxWidth: .infinity)
+                    .background(Color(NSColor.controlBackgroundColor))
                 }
-                .frame(maxWidth: .infinity)
-                .background(Color(NSColor.controlBackgroundColor))
             }
         }
     }
@@ -115,6 +122,7 @@ struct DayEventBlock: View {
     let event: CalendarEvent
     let hourHeight: CGFloat
     @Binding var document: PRJ_2030Document
+    let availableWidth: CGFloat
     @State private var showingEventDetail = false
     
     private let calendar = Calendar.current
@@ -144,16 +152,12 @@ struct DayEventBlock: View {
                 }
             }
             .padding(8)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(width: availableWidth * 0.9, height: height, alignment: .leading)
             .background(event.color.color)
             .cornerRadius(6)
+            .offset(x: availableWidth * 0.05, y: yPosition)
         }
         .buttonStyle(PlainButtonStyle())
-        .position(
-            x: 200,
-            y: yPosition
-        )
-        .frame(width: 300, height: height)
         .sheet(isPresented: $showingEventDetail) {
             EventDetailView(event: event, document: $document)
         }
@@ -161,12 +165,12 @@ struct DayEventBlock: View {
     
     private var yPosition: CGFloat {
         if event.isAllDay {
-            return 30
+            return 10
         }
         
         let hour = calendar.component(.hour, from: event.startDate)
         let minute = calendar.component(.minute, from: event.startDate)
-        return CGFloat(hour) * hourHeight + CGFloat(minute) / 60.0 * hourHeight + hourHeight / 2
+        return CGFloat(hour) * hourHeight + CGFloat(minute) / 60.0 * hourHeight
     }
     
     private var height: CGFloat {
