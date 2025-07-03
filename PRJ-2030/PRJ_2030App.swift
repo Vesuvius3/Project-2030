@@ -10,10 +10,8 @@ import SwiftUI
 @main
 struct PRJ_2030App: App {
     var body: some Scene {
-        WindowGroup {
-            InitialSetupView()
-                .environment(\.font, .americanTypewriter(size: 17))
+        DocumentGroup(newDocument: PRJ_2030Document()) { file in
+            ContentView(document: file.$document)
         }
-        .accentColor(.gray)
     }
 }

@@ -78,6 +78,7 @@ struct DayView: View {
                                 )
                             }
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                     .frame(maxWidth: .infinity)
                     .background(Color(NSColor.controlBackgroundColor))

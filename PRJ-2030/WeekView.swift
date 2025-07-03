@@ -60,15 +60,19 @@ struct WeekView: View {
                     
                     // Days columns
                     ForEach(weekDays, id: \.self) { date in
-                        DayColumn(
-                            date: date,
-                            isSelected: calendar.isDate(date, inSameDayAs: document.selectedDate),
-                            events: eventsForDate(date),
-                            hourHeight: hourHeight,
-                            document: $document
-                        ) {
-                            document.selectedDate = date
+                        GeometryReader { geometry in
+                            DayColumn(
+                                date: date,
+                                isSelected: calendar.isDate(date, inSameDayAs: document.selectedDate),
+                                events: eventsForDate(date),
+                                hourHeight: hourHeight,
+                                document: $document,
+                                availableWidth: geometry.size.width
+                            ) {
+                                document.selectedDate = date
+                            }
                         }
+                        .frame(width: 120)
                     }
                 }
             }
@@ -134,6 +138,7 @@ struct DayColumn: View {
     let events: [CalendarEvent]
     let hourHeight: CGFloat
     @Binding var document: PRJ_2030Document
+    let availableWidth: CGFloat
     let onTap: () -> Void
     
     private let calendar = Calendar.current
@@ -160,34 +165,31 @@ struct DayColumn: View {
             .buttonStyle(PlainButtonStyle())
             
             // Time grid
-            GeometryReader { geometry in
-                ZStack(alignment: .topLeading) {
-                    // Grid lines
-                    VStack(spacing: 0) {
-                        ForEach(0..<24, id: \.self) { _ in
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.2))
-                                .frame(height: 1)
-                            
-                            Rectangle()
-                                .fill(Color.clear)
-                                .frame(height: hourHeight - 1)
-                        }
+            ZStack(alignment: .topLeading) {
+                // Grid lines
+                VStack(spacing: 0) {
+                    ForEach(0..<24, id: \.self) { _ in
+                        Rectangle()
+                            .fill(Color.gray.opacity(0.2))
+                            .frame(height: 1)
+                        
+                        Rectangle()
+                            .fill(Color.clear)
+                            .frame(height: hourHeight - 1)
                     }
-                    
-                    // Events
-                    ForEach(events, id: \.id) { event in
-                        EventBlock(
-                            event: event, 
-                            hourHeight: hourHeight, 
-                            document: $document,
-                            availableWidth: geometry.size.width
-                        )
-                    }
+                }
+                
+                // Events
+                ForEach(events, id: \.id) { event in
+                    EventBlock(
+                        event: event, 
+                        hourHeight: hourHeight, 
+                        document: $document,
+                        availableWidth: availableWidth
+                    )
                 }
             }
         }
-        .frame(width: 120)
         .background(Color(NSColor.controlBackgroundColor))
         .overlay(
             Rectangle()
