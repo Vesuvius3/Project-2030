@@ -12,6 +12,7 @@ struct PRJ_2030App: App {
     var body: some Scene {
         WindowGroup {
             InitialSetupView()
+                .environment(\.font, .americanTypewriter(size: 17))
         }
     }
 }

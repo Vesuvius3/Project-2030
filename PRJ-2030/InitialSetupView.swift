@@ -11,13 +11,13 @@ struct InitialSetupView: View {
                 Spacer()
 
                 Text("Welcome, time traveler! Let's embark on a journey to a future moment.")
-                    .font(.largeTitle)
+                    .font(.americanTypewriter(size: 34))
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
 
                 Text("Choose a date in the future, and we'll count down to it with a quirky visual.")
-                    .font(.title2)
+                    .font(.americanTypewriter(size: 22))
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 40)
 
@@ -28,13 +28,14 @@ struct InitialSetupView: View {
                     displayedComponents: .date
                 )
                 .datePickerStyle(.graphical)
+                .font(.americanTypewriter(size: 18))
                 .padding()
                 .frame(maxWidth: 400) // Limit width for better appearance
 
                 Button("Begin the Countdown!") {
                     showMainAppView = true
                 }
-                .font(.title2)
+                .font(.americanTypewriter(size: 22))
                 .padding()
                 .background(Color.accentColor)
                 .foregroundColor(.white)
