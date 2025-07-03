@@ -6,7 +6,7 @@ struct InitialSetupView: View {
     @State private var showMainAppView: Bool = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Spacer()
 
@@ -45,15 +45,10 @@ struct InitialSetupView: View {
                 Spacer()
             }
             .navigationTitle("")
-            .navigationTitle("")
-            .background(
-                NavigationLink(
-                    destination: MainAppView(targetDate: selectedDate),
-                    isActive: $showMainAppView,
-                    label: { EmptyView() }
-                )
-                .hidden()
-            )
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(isPresented: $showMainAppView) {
+                MainAppView(targetDate: selectedDate)
+            }
         }
     }
 }
