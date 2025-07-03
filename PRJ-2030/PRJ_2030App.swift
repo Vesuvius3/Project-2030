@@ -13,5 +13,6 @@ struct PRJ_2030App: App {
         WindowGroup {
             InitialSetupView()
         }
+        .accentColor(.gray)
     }
 }
